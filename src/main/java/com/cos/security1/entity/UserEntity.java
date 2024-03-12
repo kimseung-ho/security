@@ -1,6 +1,9 @@
 package com.cos.security1.entity;
 
-import jakarta.persistence.*;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -13,7 +16,6 @@ public class UserEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY) //자동생성, 유니크
     private int id;
 
-    @Column(unique = true)  // uname 중복제한
     private String username;
     private String password;
 
